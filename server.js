@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-var bodyParser = require("body-parser");
-app.use(bodyParser.json());
+// "THIS IS NO NEEDED FOR NEW VERSION"
+// var bodyParser = require("body-parser");
+// app.use(bodyParser.json());
+app.use(express.json());
 app.get("/games", (req, res) => {
   fs.readFile("./games.json", "utf-8", (err, data) => {
     if (err) console.log(err);
