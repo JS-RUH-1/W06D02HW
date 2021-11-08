@@ -1,18 +1,1 @@
-[
-  {
-    "name": "Ghadah",
-    "id": 1
-  },
-  {
-    "name": "Noor",
-    "id": 2
-  },
-  {
-    "name": "Masha",
-    "id": 3
-  },
-  {
-    "name": "Sarah",
-    "id": 4
-  }
-]
+[{"name":"Ghadah","id":1},{"name":"Masha","id":3},{"name":"Sarah","id":4},{"name":"Samar","id":5}]
