@@ -1,10 +1,9 @@
 const express = require("express");
 const fs = require("fs");
-const bodyParser = require("body-parser");
 
 const app = express();
 const port = 8080;
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.get("/games", (req, res) => {
   fs.readFile("games.json", (err, data) => {
