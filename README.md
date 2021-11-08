@@ -20,12 +20,12 @@ OR to make it easier for you use the following:
 ```
 [
   {
-    id: 1,
-    name: "Tic Tac Toe"
+    "id": 1,
+    "name": "Tic Tac Toe"
   },
   {
-    id: 2,
-    name: "Uno"
+    "id": 2,
+    "name": "Uno"
   }
 ]
 ```
