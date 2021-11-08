@@ -16,6 +16,19 @@
   }
 }
 ```
+OR
+```
+[
+  {
+    "id": 1,
+    "name": "Tic Tac Toe"
+  },
+  {
+    "id": 2,
+    "name": "Uno"
+  }
+]
+```
 
 * The user should be able to use Postman to make an HTTP **post** request that adds an additional item to the list of items, use req.body to send the data you want to add it (make sure you add the item to the previous list so it should be now 3 items in the list).
 
