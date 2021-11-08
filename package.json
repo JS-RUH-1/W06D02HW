@@ -1,0 +1,24 @@
+{
+  "name": "w06d02hw",
+  "version": "1.0.0",
+  "description": "* Create a json file that contain list of Game or Foods or anything you love it * Create a Restful API using Express that will allow the user to store a list of ‘Game, Foods, ....’ items. * When the user navigates to http://localhost:8080/games list of items should be returned. E.g.:",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Turki700/W06D02HW.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Turki700/W06D02HW/issues"
+  },
+  "homepage": "https://github.com/Turki700/W06D02HW#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.14"
+  }
+}
