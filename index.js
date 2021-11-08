@@ -16,7 +16,7 @@ app.post("/", (req, res) => {
   //create new obj with data
   let postData = [
     {
-      id: game.length + 1,
+      id: jsonObj.length + 1,
       name: req.body.name,
     },
   ];
