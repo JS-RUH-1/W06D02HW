@@ -27,11 +27,13 @@ app.post("/add", (req, res) => {
   });
 });
 
-app.delete("/delete", (req, res) => {
+app.delete("/gamesDelete/:id", (req, res) => {
+  let id = req.params.id;
+  console.log(id);
   fs.readFile("./games.json", "utf-8", (err, data) => {
     if (err) console.log(err);
     let mydata = JSON.parse(data);
-    let id = req.body.id;
+    // let id = req.body.id;
 
     newData = mydata.filter((el) => {
       return el.id != id;
