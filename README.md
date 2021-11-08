@@ -16,7 +16,7 @@
   }
 }
 ```
-OR
+OR to make it easier for you use the following:
 ```
 [
   {
