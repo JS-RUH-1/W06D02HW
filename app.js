@@ -30,21 +30,23 @@ app.post('/games',function(request,response){
         }
         if ( gameObject ){
             Object.assign(jsonObject,gameObject);
+                /////////
             fileHandler.writeFile ( './json/games.json', JSON.stringify(jsonObject,null, '\t'), (error) => 
                 {
                     if ( error ) throw error; 
                     response.send(gameObject); 
                 }
             )
+            /////
         }
     }else{
         response.send({"message":"Error"}); 
     }
 });
 
-app.delete('/gamesDelete',function(request,response){
-    if (jsonObject["Game"+request.body.id]){
-        delete jsonObject["Game"+request.body.id];
+app.delete('/gamesDelete/:id',function(request,response){
+    if (jsonObject["Game"+request.params.id]){
+        delete jsonObject["Game"+request.params.id];
         fileHandler.writeFile ( './json/games.json', JSON.stringify(jsonObject,null, '\t'), (error) => 
             {
                 if ( error ) throw error; 
@@ -56,13 +58,13 @@ app.delete('/gamesDelete',function(request,response){
     }
 });
 
-app.put('/gamesEdit',function(request,response){
-    if (jsonObject["Game"+request.body.id]){
-        jsonObject["Game"+request.body.id].name = request.body.name
+app.put('/gamesEdit/:id',function(request,response){
+    if (jsonObject["Game"+request.params.id]){
+        jsonObject["Game"+request.params.id] = request.body
         fileHandler.writeFile ( './json/games.json', JSON.stringify(jsonObject,null, '\t'), (error) => 
             {
                 if ( error ) throw error; 
-                response.send(jsonObject["Game"+request.body.id]); 
+                response.send(jsonObject["Game"+request.params.id]); 
             }
         )
     }else{
