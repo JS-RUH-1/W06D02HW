@@ -1,6 +1,5 @@
 const express = require('express')
 const app = express()
-const path = require('path');
 const fileHandler = require('fs');
 let jsonData = fileHandler.readFileSync('./json/games.json');
 let jsonObject = JSON.parse(jsonData);
@@ -69,12 +68,6 @@ app.post('/gamesEdit',function(request,response){
         response.send({"message":"Game not found"}); 
     }
 });
-
-app.get('/games',function(request,response){
-    response.send(jsonObject);
-});
-
-
 
 app.listen(8080, () => {
   console.log(`Example app listening at http://localhost:8080`)
