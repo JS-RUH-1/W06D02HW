@@ -26,13 +26,20 @@ app.delete("/delete/:id", (req, res) => {
 });
 
 app.put("/put/:id", (req, res) => {
-  const game = {
-    id: req.body.id,
-    name: req.body.name,
-  };
-
-  game.name = req.body.name;
-  res.send(game);
+  let found = games.find(function (item) {
+    return item.id === parseInt(req.params.id);
+  });
+  if (found) {
+    let update = {
+      id: found.id,
+      name: req.body.name,
+    };
+    let targetIndex = games.indexOf(found);
+    games.splice(targetIndex, 1, update);
+    res.send(games);
+  } else {
+    res.sendStatus(404);
+  }
 });
 
 app.use((req, res) => {
