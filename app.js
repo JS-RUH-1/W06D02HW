@@ -15,9 +15,9 @@ app.post("/games", (req, res) => {
     fs.readFile("games.json", "utf8", (err, data) => {
       let arr = JSON.parse(data);
   
-      let updated = [...arr,{id: arr.length + 1, name: req.body.name,},];
-      fs.writeFile("games.json", JSON.stringify(updated), (err) => {
-        res.json(updated);
+      arr.push({id: arr.length + 1, name: req.body.name,})
+      fs.writeFile("games.json", JSON.stringify(arr), (err) => {
+        res.json(arr);
       });
     });
   });
