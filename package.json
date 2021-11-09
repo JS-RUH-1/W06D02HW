@@ -1,0 +1,25 @@
+{
+  "name": "w06d02hw",
+  "version": "1.0.0",
+  "description": "* Create a json file that contain list of Game or Foods or anything you love it\r * Create a Restful API using Express that will allow the user to store a list of\r ‘Game, Foods, ....’ items.\r * When the user navigates to http://localhost:8080/games list of items should be returned. E.g.:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mu2Almalki/W06D02HW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mu2Almalki/W06D02HW/issues"
+  },
+  "homepage": "https://github.com/Mu2Almalki/W06D02HW#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
