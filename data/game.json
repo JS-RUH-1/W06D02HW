@@ -1,0 +1,14 @@
+{
+    "Game1": {
+        "id": 1,
+        "name": "Tic Tac Toe"
+    },
+    "Game2": {
+        "id": 2,
+        "name": "Uno"
+    },
+    "Game3": {
+        "id": 3,
+        "name": "Soccer table"
+    }
+}
